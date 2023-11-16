@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/fdd870ea48.js" crossorigin="anonymous"></script>
+    
+    <title>Tiya Golf club</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #3d405b;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .section-1{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .svg1{
+            position: absolute;
+            top: -140px;
+            z-index: 0;
+        }
+        .svg2{
+            height: 80%;
+            position: absolute;
+            z-index: 0;
+            bottom: -150px;
+        }
+        .section-1 img:nth-child(1){
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            opacity: 0.7;
+            z-index: -1;
+
+        }
+        .navbar{
+            position: sticky;
+            top: 0;
+            background-color: #3d405b !important;
+            display: flex;
+            height: 18%;
+            color: white;
+            z-index: 2  ;
+        }
+        .logo-img{
+            margin-top: 15px;
+            margin-left: 70px;
+            height: 50px ;
+            width: 50px ;
+            /* border: 1px solid white; */
+        }
+        .logo-img img{
+            height: 45px !important;
+            width: 45px !important;
+            filter: invert(10%) sepia(1%) saturate(100%) hue-rotate(1deg) brightness(1000%) contrast(900%);
+        }
+        .logo-font{
+            margin-top: -5px ;
+        }
+        .logo-font p{
+            font-size: 12px;
+            margin-top: -20px;
+        }
+        .logo-items{
+            margin:20px 0px 0px 200px;
+            width: 50%;
+            height: 60%;
+            font-size: 16px;
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .logo-items a{
+            cursor: pointer;
+            text-align: center;
+            /* border: 1px solid white; */
+            width: 100px;
+            height: 30px;
+            margin: 10px;
+        }
+        .logo-items a p{
+            margin-top: 0px;
+            display: flex;
+            align-items: center;
+        }
+        .logo-items a img{
+            margin-left: 10px;
+            width: 20px;
+            filter: invert(10%) sepia(1%) saturate(100%) hue-rotate(1deg) brightness(1000%) contrast(900%);
+        }
+        .logo-items a:hover{
+            transition-duration: 0.25s;
+            transition-timing-function: ease-in-out;
+            color: #F2CC8F;
+        }
+        .logo-items ul{
+            margin-top: 10px;
+            display: none;
+            position: absolute;
+            padding-left: 10px;
+            height: 60px;
+            list-style-type: none;
+            width: 100px;
+            background-color: white;
+            border: none;
+            z-index: 1;
+            border-radius: 6px;
+            padding-top: 10px;
+        }
+        .logo-items ul li{
+            color: #717275;
+            margin-top: 5px;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: left;
+        }
+        .logo-items .page:hover +ul{
+            /* height: 60px; */
+            margin-top: 0px;
+            display: block;
+            z-index: 1;
+            position: absolute;
+            transition-duration: 0.25s;
+            transition-timing-function: ease-in-out;
+        }
+        .logo-items ul:hover{
+            display: block;
+            z-index: 1;
+            position: absolute;
+            transition-duration: 0.25s;
+            transition-timing-function: ease-in-out;
+        }
+        .navbar button{
+            margin-top: 25px;
+            height: 40px;
+            width: 150px;
+            border: 2px solid #F2CC8F;
+            color: #F2CC8F;
+            background: transparent;
+            border-radius: 50px;
+        }
+        .navbar button:hover{
+            transition-duration: 0.25s;
+            transition-timing-function: ease-in-out;
+            background-color: #F2CC8F;
+            color: white;
+        }
+        
+        .mid-section-1{
+            margin-top: 100px;
+            height: 50%;
+            z-index: 1;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .section-1-content{
+            position: relative;
+            /* border: 1px solid green; */
+            width: 50%;
+            height: 100%;
+            margin-left: 30px;
+            color: white;
+        }
+        .section-1-content h3{
+            font-size: 40px;
+            margin: 0px;
+        }
+        .section-1-content h2{
+            margin: 0px;
+            font-size: 50px;
+        }
+        .section-1-content h2 p{
+            display: inline;
+            color: #F2CC8F;
+        }
+        .mid-section-footer{
+            display: flex;
+            margin-top: 30px;
+            width: 40%;
+            align-items: center;
+            font-weight: 600;
+            justify-content: space-between;
+        }
+        .mid-section-footer button{
+            height: 40px;
+            cursor: pointer;
+            width: 100px;
+            border-radius: 40px;
+            background-color: #F2CC8F;
+            color: white;
+            
+            border: none;
+        }
+        .mid-section-footer p{
+            cursor: pointer;
+        }
+        .mid-section-footer p:hover{
+            color: #F2CC8F;
+        }
+        .mid-section-footer button:hover{
+            transition-duration: 0.25s;
+            transition-timing-function: ease-in-out;
+            background-color: #E07A5F;
+        }
+
+        .youtubelink iframe{
+            height: 250px;
+            width: 480px;
+            border-radius: 20px;
+            margin-right: 55px;
+        }
+
+        /* ==============================================SECTION - 2=============================================== */
+        .section-2{
+            height: 85vh;
+            margin-top: -35px;
+            background-color: white;
+        }
+
+        .section-2-heading{
+            color: black;
+            font-size: 35px;
+            width: 22%;
+            font-weight: bolder;
+            margin: 0px auto;
+            
+        }
+        .section-2-mid{
+            display: flex;
+            /* border: 2px solid red; */
+            height: 40%;
+        }
+        .section-2 .mid-left{
+            width: 35%;
+            height: 60vh;
+            margin-left: 80px;
+            /* border: 1px solid green; */
+        }
+        
+
+        .section-2 .mid-left h1{
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .section-2 .mid-left p{
+            font-size: 18px;
+            color: #717275;
+        }
+        .section-2 .mid-left b{
+            color: #717275;
+        }
+
+
+        .section-2 .mid-right{
+            display: flex;
+            position: relative;
+            margin: 50px 100px;
+            justify-content: center;
+            width: 40%;
+            height: 60vh;
+            margin-left: 10%;
+
+        }
+        .section-2 .mid-image img{
+            height: 55%;
+            width: 95%;
+            border-radius: 10px;
+        }
+        .section-2 .mid-image{
+            height: 300px;
+            width: 85%;
+            /* border: 1px solid deeppink; */
+        }
+        .section-2 .name-detail{
+            display: flex;
+            width: 95%;
+            margin-top: -10px;
+            justify-content: space-between;
+            /* border: 1px solid red; */
+        }
+
+        .name-detail h2{
+            font-weight: 500;
+        }
+        .name-detail p{
+            margin-top: 30px;
+        }
+        .svg3{
+            margin-top: 0px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* =================================section 3 ==================================*/
+        .section-3{
+            height: 120vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        .svg4{
+            position: absolute;
+            z-index: 0;
+            margin-top: 56vh;
+            /* top: 0; */
+        }
+        .section-3 img:nth-child(1){
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+        }
+
+        .section-3-box{
+            width: 45%;
+            position: absolute;
+            border-radius: 25px;
+            height: 55%;
+            margin: 180px 80px ;
+            align-items: center;
+            background-color: #fff;
+            opacity: 0.8;
+        }
+
+        .section-3-box h1{
+            width: 80%;
+            margin: 50px auto 20px;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        .section-3-box p{
+            width: 80%;
+            font-size: 18px;
+            margin: 0px auto;
+        }
+
+        .section-3 .inputfield{
+            position: absolute;
+            top: 264vh;
+            left: 10vw;
+            width: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 70px;
+            background :rgba(250, 250, 250, 1) !important;
+            opacity: 1 !important;
+            z-index: 1 !important;
+            margin: 30px auto;
+            /* border: 1px solid red !important; */
+            border-radius: 50px;
+
+        }
+        .section-3 .inputfield input{
+            border: none;
+            width: 170px;
+            background-color: transparent;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        .section-3 button{
+            background-color: #F2CC8F;
+            height: 50px;
+            width: 150px;
+            margin-left: 20px;
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+        } 
+        .section-3 .inputfield img{
+            height: 30px;
+            width: 35px;
+            margin-left: 10px;
+        }
+        .section-3 button:hover{
+            transition-duration: 0.25s;
+            transition-timing-function: ease-in-out;
+            background-color: #E07A5F;
+        }
+
+
+        /* =============================================Section-4======================================================== */
+        .section-4-header{
+            font-size: 25px;
+            color: black;
+            width: 28%;
+            margin: 0px auto;
+            /* border: 1px solid red; */
+            font-weight: bolder;
+            position: relative;
+
+        }
+        .section-4{
+            position: relative;
+            margin-top: 80px;
+            display: flex;
+            height: 100vh;
+            background-color: #fff;
+            /* border: 1px solid red; */
+        }
+        .section-4-left{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            left: 8vw;
+            justify-content: left;
+            height: 90%;
+            width: 60%;
+            /* background-color: wheat; */
+        }
+        .section-4-right{
+            position: relative;
+            width: 40%;
+            height: 90%;
+
+            /* background-color: yellowgreen; */
+        }
+        .section-4 p{
+            font-size: 22px;
+            font-weight: 600;
+            /* border: 1px solid green; */
+        }
+        .section-4-left table{
+            /* margin-left: 30px; */
+            height: 80%;
+            width: 80%;
+            text-align: center;
+            /* padding-left: 10px; */
+            border-radius: 20px;
+            /* border: 1px solid black; */
+            font-size: 17px;
+            font-weight: 700;
+            border-collapse: collapse;
+            overflow: hidden;
+        }
+        .section-4-left table tr:nth-child(1){
+            background-color: #3D405B;
+        }
+        .section-4-left table th{
+            color: white;
+        }
+        .section-4-left table tr:nth-child(2) , .section-4-left table tr:nth-child(4), .section-4-left table tr:nth-child(6){
+            background-color: #fff;
+        }
+        .section-4-left table tr:nth-child(3) , .section-4-left table tr:nth-child(5), .section-4-left table tr:nth-child(7){
+            background-color: #F4F1DE;
+        }
+        .section-4-left table tr td:nth-child(1){
+            padding-left: 20px;
+            text-align: left;
+        }
+        .section-4-left table tr th:nth-child(1){
+            padding-left: 30px;
+            text-align: left;
+        }
+        .inside-right-box{
+            height: 80%;
+            width: 90%;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 10px;
+            background: #3D405B;
+        }
+        .inside-right-box h1{
+            font-weight: 600;
+            font-size: 25px;
+            width: 80%;
+            /* border: 1px solid white; */
+            color: white;
+        }
+        .inside-right-box form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            flex-direction: column;
+        }
+        .inside-right-box form input{
+            height: 45px;
+            margin-top: 10px;
+            width: 82%;
+            font-size: 14px;
+            color: black !important;
+            border: 2px solid #DEE2E6;
+            font-weight: 400;
+            padding-left: 12px;
+            border-radius: 50px;
+        }
+        .inside-right-box form input:hover{
+            height: 43px;
+            width: 81%;
+            border: 2px solid black;
+        }
+        .inside-right-box form textarea{
+            height: 90px;
+            margin-top: 10px;
+            width: 79%;
+            color: black;
+            font-size: 18px;
+            border: 2px solid #DEE2E6;
+            font-weight: 400;
+            padding: 15px;
+            border-radius: 20px;
+        }
+        .inside-right-box form textarea:hover{
+            height: 89px;
+            width: 78%;
+            border: 2px solid black;
+        }
+        .inside-right-box form button{
+            margin-top: 20px;
+            height: 43px;
+            width: 85%;
+            border: none;
+            border-radius: 50px;
+            background-color: #F2CC8F;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .inside-right-box form button:hover{
+            transition-duration: 0.25s;
+            transition-timing-function: ease-in-out;
+            background-color: #E07A5F;
+        }
+
+        /* ==================================================SECTION-5=============================================== */
+        .section-5{
+            margin-top: -4vh;
+            height: 130vh;
+            background-color: #F4F1DE;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section-5 h1:nth-child(1){
+            position: relative;
+            left: -25vw;
+            top: 10vh;
+            font-size: 36px;
+            font-weight: 600;
+            width: 30%;
+            /* border: 1px solid black; */
+        }
+        .section-5-upper{
+            position: relative;
+            top: 12vh;
+            height: 33%;
+            /* border: 2px solid green; */
+            width: 80%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
+        .upper-left{
+            position: relative !important;
+            margin-top: 20px;
+            width: 14%;
+            /* border: 1px solid blue; */
+            background-color: #81B29A;
+            border-radius: 20px;
+            height: 45%;
+        }
+        .upper-left h1:nth-child(1){
+            left: 3.5vw;
+            top: -2vh;
+            position: relative;
+            /* border: 1px solid red; */
+            width: 40px;
+        }
+        .upper-left h1:nth-child(2){
+            left: 2vw;
+            top: -6vh;
+            font-weight: 500;
+            font-size: 18px;
+            color: white;
+            position: relative;
+            /* border: 1px solid red; */
+            width: 80px;
+        }
+        .upper-mid{
+            margin-top: 20px;
+            width: 30%;
+            height: 70%;
+            /* border: 1px solid blueviolet; */
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .upper-mid img{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+        .img-centerBtn{
+            position: absolute;
+            top: -20vh;
+            left: 20vh;
+            z-index: -1;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #F2CC8F;
+        }
+        .img-centerBtn i{
+            position: absolute;
+            left: 3vh;
+            top: 4vh;
+            cursor: pointer;
+        }
+        .img-centerBtn :hover{
+            background-color: #E07A5F;
+        }
+        .upper-mid img:hover{
+            display: block;  
+            z-index: 1; 
+            top:-5vh;
+            left: -5vh;
+            position: relative;
+            height: 105%;
+            width: 105%;
+            transition-duration: 0.15s;
+            transition-timing-function: ease-out;
+        }
+        /* .upper-mid img:hover + .img-centerBtn{
+            display: block;
+            position: relative;
+            z-index: 1;
+        } */
+        .upper-right{
+            margin-top: 20px;
+            width: 45%;
+            height: 85%;
+            /* border: 1px solid red; */
+        }
+        .right-heading{
+            height: 40px;
+            width: 450px;
+            /* border: 1px solid blue; */
+            
+        }
+        .right-heading a:hover{
+            text-decoration: none;
+            color: #F2CC8F;
+        }
+        .right-heading a{
+            text-decoration: none;
+            font-size: 28px;
+            color: #3d405b;
+            font-weight: 600;
+        }
+        .right-content{
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+        .right-content p{
+            font-size: 18px;
+            color: #3d405b;
+            font-weight: 400;
+        }
+        .right-content hr{
+            color: #717275;
+        }
+
+        .right-foot{
+            /* border: 1px solid purple; */
+            width: 100%;
+            height: 30%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .right-foot div:nth-child(1){
+            display: flex;
+            flex-direction: column;
+        }
+        .inside-right-foot{
+            display: flex;
+            flex-direction: column;
+            /* border: 1px solid brown; */
+            width: 100%;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .inside-right-foot .line-one{
+            display: flex;
+            width: 95%;
+            height: 30px;
+            flex-direction: row !important;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 1px solid blue; */
+        }
+        .inside-right-foot b{
+            color: #3d405b;
+        }
+        .inside-right-foot .line-two{
+            /* border: 1px solid blue; */
+            display: flex;
+            width: 53%;
+            height: 30px;
+            flex-direction: row;
+           align-items: center;
+           justify-content: space-between;
+        }
+        .inside-right-foot p{
+           color: #3d405b;
+        }
+        .partition-left{
+            width: 60%;
+        }
+        .btn{
+            position: relative;
+            top: -5px;
+            left: 80px;
+            border-radius: 50px;
+            width: 100px;
+            border: none;
+            font-weight: 600;
+            background-color: #F2CC8F;
+            color: white;
+            height: 35px;
+        }
+        .btn:hover{
+            background-color: #E07A5F;
+            transition-duration: .25s;
+            transition-timing-function: ease-in ease-out;
+        }
+
+        .section-5-lower{
+            position: relative;
+            top: 13vh;
+            height: 33%;
+            background-color: #fff;
+            border-radius: 40px;
+            /* border: 2px solid green; */
+            width: 80%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
+
+
+
+        /*==============================================SECTION-6===================================================== */
+
+
+
+
+        .section-6{
+            height: 80vh;
+            background-color: #fff;
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-6-header{
+            height: 20%;
+            width: 20%;
+            left: -33vw;
+            /* border: 2px solid red !important; */
+            position: relative;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .section-6-lower{
+            height: 70%;
+            width: 90%;
+            /* border: 2px solid blueviolet; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .section-6-left{
+            position: relative;
+            width: 45%;
+            height: 100%;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .section-6 form{
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+            font-size: 18px;
+        }
+        .section-6 .Input-field{
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            justify-content: space-evenly;
+        }
+
+        .section-6-left form div input{
+            margin-top: 5%;
+            /* padding: 5px; */
+            padding-left: 15px;
+            font-size: 15px;
+            width: 40%;
+            color: black;
+            height: 55px;
+            border-radius: 30px;
+            border: 2px solid #E3E7EA;
+        }
+        .section-6-left form textarea{
+            /* margin-top: 20px; */
+            padding-left: 15px;
+            padding-top: 10px;
+            font-size: 17px;
+            height: 100px;
+            width: 88%;
+            border-radius: 20px;
+            border: 2px solid #E3E7EA;
+        }
+        .section-6-left form button{
+            width: 88%;
+            height: 50px;
+            border: none;
+            font-size: 17px;
+            font-weight: 500;
+            border-radius: 30px;
+            color: white;
+            background-color: #F2CC8F;
+            cursor: pointer;
+        }
+        .section-6-left form button:hover{
+            transition-duration: 0.25s;
+            transition-timing-function: ease-in-out;
+            background-color: #e07a5f;
+        }
+        .section-6-left form textarea:hover,  .section-6-left form div input:hover{
+            border-color: black;
+        }
+
+        .section-6-right{
+            height: 100%;
+            width: 60%;
+            /* border: 2px solid red; */
+        }
+        .section-6-right img{
+            margin: 10px 30px;
+            position: relative;
+            height: 70%;
+            width: 80%;
+            /* border: 1px solid red; */
+        }
+        .inside-right{
+            position: relative;
+            border-radius: 20px;
+            background-color: #3D405B;
+            top: -38vh;
+            left: 13vw;
+            height: 50%;
+            width: 39%;
+            box-sizing: border-box;
+            /* border: 1px solid green; */
+            overflow: hidden;
+        }
+        .right-upper{
+            color: white;
+        }
+        .right-upper p:nth-child(1){
+            font-size: 16px;
+            font-weight: 500;
+            padding: 0px 30px;
+        }
+        .right-upper p:nth-child(2){
+            font-size: 18px;
+            font-weight: 200;
+            width: 65%;
+            margin: 0px auto;
+            /* border: 1px solid white; */
+        }
+        .right-lower{
+            width: 101%;
+            /* border: 1px solid white; */
+            height: 25%;
+            left: -1px;
+            position: relative;
+            top: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #E07A5F;
+
+        }
+        .right-lower p{
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* ========================================================Section-7============================================================== */
+
+        .section-7{
+            height: 85vh;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .content{
+            margin-top: 6vh;
+            height: 50%;
+            display: flex;
+        }
+        .svg7{
+            position: relative;
+            margin-top: -35vh;
+            height: 125%;
+        }
+
+        .section-7-left{
+            width: 55%;
+            height: 100%;
+        }
+        .section-7-right{
+            width: 45%;
+            /* border: 1px solid red; */
+            height: 100%;
+            font-size: 16px;
+            color: #3D405B;
+        }
+        .section-7-logo{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: relative;
+            left: 6vw !important;
+            height: 30%;
+            width: 20%;
+        }
+        .section-7-logo img{
+            height: 55%;
+            width: 40%;
+        }
+        .section-7-right h1{
+            /* border: 1px solid deeppink; */
+            /* margin-top: -10px; */
+            font-size: 24px;
+            font-weight: 500;
+
+        }
+        .center-content{
+            display: flex;
+            justify-content: space-between;
+        }
+        .center-left{
+            /* border: 1px solid green; */
+            width: 46%;
+            color: #717275;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        .center-right{
+            height: 50%;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            /* border: 1px solid purple; */
+            width: 45%;
+        }
+        .center-right-upper{
+            margin-left: -10px;
+            height: 45px;
+            width: 55%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* border: 1px solid blue; */
+        }
+        .center-right-upper div{
+            position: relative;
+            height: 35px;
+            width: 35px;
+            background-color: #3d405b;
+            border-radius: 50%;
+            z-index: 1;
+            cursor: pointer !important;
+            /* border: 2px solid yellow; */
+        }
+        .center-right-upper i{
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        .center-right-upper div:hover{
+            background-color: #81B29A;
+        }
+        .center-right-lower {
+            /* border: 1px solid red; */
+            font-size: 18px;
+            position: relative;
+            left: -20px;
+            font-weight: 400;
+            color: #717275;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .center-right-lower b:hover{
+            color: #F2CC8F;
+        }
+        .center-right-lower b{
+            position: relative;
+            top: -10px;
+            color: #3d405b;
+            font-size: 19px;
+            font-weight: 500;
+        }
+        .section-7-copyright{
+            font-size: 20px;
+            color: #717275;
+            width: 20vw;
+            font-weight: 400;
+            font-family: sans-serif;
+            /* border: 1px solid black; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-img"><img src="/Tiya Web Page Template/images/logo.png"  alt="Tiya"></div>
+        <div class="logo-font">
+            <h2>Tiya</h2>
+            <p>GOLF CLUB</p>
+        </div>
+        <div class="logo-items">
+            <a style="color: #F2CC8F;">Home</a>
+            <a>About</a>
+            <a>Membership</a>
+            <a>Event</a>
+            <a>Contact Us</a>
+            <a><p class="page">Pages <img src="/images/chevron-down-solid.svg" alt=""/></p>
+                <ul>
+                    <li>Event Listning</li>
+                    <li>Event Detail</li>
+                </ul>
+            </a>
+        </div>
+        <button>Member Login</button>
+    </div>
+    <section class="section-1" >
+    <img src="/images/anna-rosar-ZxFyVBHMK-c-unsplash.jpg" alt="">
+    <svg class="svg1" width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 66.68567502576434,166.37787701820682 133.37135005152868,132.75575403641363 207,150 C 280.6286499484713,167.24424596358637 361.2002748196496,235.35486087255236 422,268 C 482.7997251803504,300.64513912744764 523.8275506698728,297.82480247337685 595,266 C 666.1724493301272,234.17519752662318 767.4895225008588,173.34592923394027 842,170 C 916.5104774991412,166.65407076605973 964.2143593266917,220.79148059086225 1018,231 C 1071.7856406733083,241.20851940913775 1131.653040192374,207.4881484026108 1203,195 C 1274.346959807626,182.5118515973892 1357.1734799038131,191.2559257986946 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#3d405b" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>
+    
+    <div class="mid-section-1">
+        <div class="section-1-content">
+
+        <h3>Welcome to the club </h3>
+        <h2>Tiya is <p> Lifestyle</p></h2>
+        <div class="mid-section-footer">
+            <button>Our Story</button>
+        <p>Become a member</p>
+        </div>
+    </div>
+    <div class="youtubelink">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MGNgbNGOzh8?si=2QFQ8U2Qw2o4owfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    </div>
+    </div>
+    <svg class="svg2" width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 49.73821796759941,226.57437407952872 99.47643593519882,253.14874815905745 167,255 C 234.52356406480118,256.85125184094255 319.8324742268041,233.979381443299 383,210 C 446.1675257731959,186.020618556701 487.19366715758474,160.9337260677467 541,173 C 594.8063328424153,185.0662739322533 661.3928571428571,234.28571428571425 724,223 C 786.6071428571429,211.71428571428575 845.2349042709869,139.92341678939619 897,142 C 948.7650957290131,144.07658321060381 993.6675257731956,220.02061855670104 1062,222 C 1130.3324742268044,223.97938144329896 1222.0949926362298,151.99410898379972 1289,136 C 1355.9050073637702,120.0058910162003 1397.952503681885,160.00294550810014 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#ffffff" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+    </section>
+    <section class="section-2">
+        <div class="section-2-heading">
+            <p>About Tiya</p>
+        </div>
+        <div class="section-2-mid">
+            <div class="mid-left">
+                <h1>Tiya Club History</h1>
+                <p><b>Since 1984</b>, Tiya is ranked #8 in the top 10 golf courses in the world. Tiya is Bootstrap 5 HTML CSS template for golf clubs. Anyone can modify and use this layout for commercial purposes.</p>
+                <p>Tiya Golf Club is 100% free CSS template provided by TemplateMo website. Please tell your friends about our website. Thank you for visiting.</p>
+            </div>
+            <div class="mid-right">
+                <div class="mid-image">
+                    <img src="/Tiya Web Page Template/images/members/portrait-young-handsome-businessman-wearing-suit-standing-with-crossed-arms-with-isolated-studio-white-background.jpg" >
+                    <div class="name-detail">
+                        <h2>Michael</h2>
+                        <p>Founder</p>
+                    </div>
+                </div>
+                <div class="mid-image">
+                    <img src="/Tiya Web Page Template/images/members/successful-asian-lady-boss-red-blazer-holding-clipboard-with-documens-pen-working-looking-happy-white-background.jpg" alt="">
+                    <div class="name-detail">
+                        <h2>Sandy</h2>
+                        <p>Co-Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg class="svg3" width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#F78DA7"></stop><stop offset="95%" stop-color="#8ED1FC"></stop></linearGradient></defs><path d="M 0,400 C 0,400 0,200 0,200 C 45.16881443298969,233.83505154639175 90.33762886597938,267.6701030927835 154,264 C 217.66237113402062,260.3298969072165 299.81829896907215,219.15463917525773 368,209 C 436.18170103092785,198.84536082474227 490.38917525773195,219.71134020618558 539,242 C 587.610824742268,264.2886597938144 630.625,288 697,270 C 763.375,252.00000000000003 853.110824742268,192.28865979381447 916,177 C 978.889175257732,161.71134020618553 1014.9317010309278,190.84536082474224 1075,199 C 1135.0682989690722,207.15463917525776 1219.1623711340205,194.3298969072165 1284,191 C 1348.8376288659795,187.6701030927835 1394.4188144329896,193.83505154639175 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#FFFFFF" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>
+    </section>
+    <section class="section-3">
+        <img src="/Tiya Web Page Template/images/frederik-rosar-NDSZcCfnsbY-unsplash.jpg" alt="">
+        <div class="section-3-box">
+            <h1>Get our newsletter</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore.</p>
+            </div>
+            <div class="inputfield">
+                <input type="email" name="email" placeholder="Email Address"> <button>Subscribe</button>
+            </div>
+        <svg class="svg4" width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#F78DA7"></stop><stop offset="95%" stop-color="#8ED1FC"></stop></linearGradient></defs><path d="M 0,400 C 0,400 0,200 0,200 C 58.18961708394697,218.65960972017672 116.37923416789394,237.31921944035346 184,217 C 251.62076583210606,196.68078055964654 328.6726804123712,137.38273195876286 392,131 C 455.3273195876288,124.61726804123712 504.9300441826214,171.14985272459498 567,212 C 629.0699558173786,252.85014727540502 703.6071428571429,288.0178571428571 752,265 C 800.3928571428571,241.98214285714286 822.6413843888071,160.7787187039764 878,131 C 933.3586156111929,101.22128129602359 1021.8273195876286,122.86726804123711 1088,131 C 1154.1726804123714,139.1327319587629 1198.0493372606775,133.75220913107512 1253,143 C 1307.9506627393225,152.24779086892488 1373.9753313696613,176.12389543446244 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#fff" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+        <div class="section-4-header">
+            <h1>Membership at Tiya</h1>
+        </div>
+    </section>
+    <section class="section-4">
+        <div class="section-4-left">
+            <p>Membership Fees</p>
+            <table>
+                <tr>
+                <th>Yearly Access</th>
+                <th>T1 $420</th>
+                <th>T2 $640</th>
+                <th>T3 $860</th>
+                </tr>
+                <tr>
+                    <td>Golf Insurance</td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                </tr>
+                <tr>
+                    <td>Club Facilities</td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                </tr>
+                <tr>
+                    <td>Country Club</td>
+                    <td><i class="fa-solid fa-circle-xmark" style="color: #e07a5f;"></i></td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                </tr>
+                <tr>
+                    <td>Weekend Seasonal</td>
+                    <td><i class="fa-solid fa-circle-xmark" style="color: #e07a5f;"></i></td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                </tr>
+                <tr>
+                    <td>Premium Courses</td>
+                    <td><i class="fa-solid fa-circle-xmark" style="color: #e07a5f;"></i></td>
+                    <td><i class="fa-solid fa-circle-xmark" style="color: #e07a5f;"></i></td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                </tr>
+                <tr>
+                    <td>Pro's Networking</td>
+                    <td><i class="fa-solid fa-circle-xmark" style="color: #e07a5f;"></i></td>
+                    <td><i class="fa-solid fa-circle-xmark" style="color: #e07a5f;"></i></td>
+                    <td><i class="fa-solid fa-circle-check" style="color: #81b29a;"></i></td>
+                </tr>
+            </table>
+        </div>
+        <div class="section-4-right">
+            <p>
+                Please join us!
+            </p>
+            <div class="inside-right-box">
+                <h1 class="inside-box-heading">
+                    Become a member
+                </h1>
+                <form action="POST">
+                    <input type="text" name="name" placeholder="Full Name">
+                    <input type="text" name="email" placeholder="Email address">
+                    <textarea name="comment"  cols="24" rows="8" placeholder="Comments"></textarea>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="section-5">
+        <h1>Upcoming Events</h1>
+        <div class="section-5-upper">
+            <div class="upper-left">
+                <h1>24</h1>
+                <h1>Feb 2048</h1>
+            </div>
+            <div class="upper-mid">
+                <img src="/Tiya Web Page Template/images/professional-golf-player.jpg" alt="">
+                <div class="img-centerBtn">
+                    <i class="fa-solid fa-link" style="color: #ffffff;"></i>
+                </div>
+            </div>
+            <div class="upper-right">
+                <div class="right-heading">
+                    <a href="#">Private activities</a>
+                </div>
+                <div class="right-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <hr>
+                </div>
+                <div class="right-foot">
+                    <div class="partition-left">
+                        <div class="inside-right-foot">
+                        <div class="line-one">
+                            <b>Location:</b>
+                            <p>National Center, NYC</p>
+                        </div>
+                    <div class="line-two">
+                        <b>Ticket:</b>
+                        <p>$250</p></div>
+                    </div>
+                    </div>
+                    <button class="btn">Buy Ticket</button>
+                </div>
+            </div>
+        </div>
+        <div class="section-5-lower">
+            <div class="upper-left">
+                <h1>28</h1>
+                <h1>Feb 2048</h1>
+            </div>
+            <div class="upper-mid">
+                <img src="/Tiya Web Page Template/images/girl-taking-selfie-with-friends-golf-field.jpg" alt="">
+                <div class="img-centerBtn">
+                    <i class="fa-solid fa-link" style="color: #ffffff;"></i>
+                </div>
+            </div>
+            <div class="upper-right">
+                <div class="right-heading">
+                    <a href="#">Group Tournament activities</a>
+                </div>
+                <div class="right-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <hr>
+                </div>
+                <div class="right-foot">
+                    <div class="partition-left">
+                        <div class="inside-right-foot">
+                        <div class="line-one">
+                            <b>Location:</b>
+                            <p>National Center, NYC</p>
+                        </div>
+                    <div class="line-two">
+                        <b>Ticket:</b>
+                        <p>$350</p></div>
+                    </div>
+                    </div>
+                    <button class="btn">Buy Ticket</button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <section class="section-6">
+        <div class="section-6-header">
+            <h1>Contact Tiya</h1>
+        </div>
+        <div class="section-6-lower">
+            <div class="section-6-left">
+                <form action="POST">
+                    <div class="Input-field">
+                        <input type="text" name="name" placeholder="Full Name">
+                        <input type="email" name="email" placeholder="Email address">
+                    </div>
+                    <textarea name="comment" cols="25" rows="8" placeholder="Message"></textarea>
+                    <button type="button">Submit Form</button>
+                </form>
+            </div>
+            <div class="section-6-right">
+                <img src="/Tiya Web Page Template/images/WorldMap.svg" alt="">
+                <div class="inside-right">
+                    <div class="right-upper">
+                        <p>London, United Kingdom</p>
+                        <p>(020) 010-020-0340 info@company.com</p>
+                    </div>
+                    <div class="right-lower">
+                        <p>Directions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-7">
+        <div class="content">
+            <div class="section-7-left">
+            <div class="section-7-logo logo-font">
+                <img src="/Tiya Web Page Template/images/logo.png" alt="">
+                <div>
+                    <h1>Tiya</h1>
+                <p>GOLF CLUB</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-7-right">
+            <h1>Join Us</h1>
+            <div class="center-content">
+                <div class="center-left">
+                    <pre><p>Mon-Fri  6:00 AM - 6:00 PM</p></pre>
+                    <hr>
+                    <pre><p>Sat-Sun  6:30 AM - 8:30 PM</p></pre>
+                </div>
+                <div class="center-right">
+                    <div class="center-right-upper">
+                        <div><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></div>
+                        <div><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></div>
+                        <div><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></div>
+                    </div>
+                    <div class="center-right-lower">
+                        <p>Design: </p>
+                        <b>TemplateMo</b>
+                    </div>
+                </div>
+
+            </div>
+            <p class="section-7-copyright">Copyright &copy; 2048 Tiya Golf Club</p>
+        </div>
+        </div>
+        <svg class="svg7" width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 49.73821796759941,226.57437407952872 99.47643593519882,253.14874815905745 167,255 C 234.52356406480118,256.85125184094255 319.8324742268041,233.979381443299 383,210 C 446.1675257731959,186.020618556701 487.19366715758474,160.9337260677467 541,173 C 594.8063328424153,185.0662739322533 661.3928571428571,234.28571428571425 724,223 C 786.6071428571429,211.71428571428575 845.2349042709869,139.92341678939619 897,142 C 948.7650957290131,144.07658321060381 993.6675257731956,220.02061855670104 1062,222 C 1130.3324742268044,223.97938144329896 1222.0949926362298,151.99410898379972 1289,136 C 1355.9050073637702,120.0058910162003 1397.952503681885,160.00294550810014 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#81B29A" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+
+    </section>
+</body>
+</html>
